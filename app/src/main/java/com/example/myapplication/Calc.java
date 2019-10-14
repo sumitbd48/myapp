@@ -16,6 +16,7 @@ public class Calc extends AppCompatActivity implements View.OnClickListener{
     int num1,num2;
     int res;
     String op;
+    int a;
 
 
     @Override
