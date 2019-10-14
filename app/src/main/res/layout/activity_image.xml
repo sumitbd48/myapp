@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RadioGroup
+        android:id="@+id/rgSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/rbBird"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Bird"/>
+
+    <RadioButton
+        android:id="@+id/rbTiger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Tiger"/>
+
+    <RadioButton
+        android:id="@+id/rbSnake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Snake"/>
+
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/ivShowing"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/bird"/>
+
+</LinearLayout>
+
+
