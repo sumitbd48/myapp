@@ -138,6 +138,7 @@ public class Calc extends AppCompatActivity implements View.OnClickListener{
 
             case R.id.btnClear:
                 displayNum= "";
+                editText.setText(displayNum);
                 break;
 
             case R.id.btnEq:
