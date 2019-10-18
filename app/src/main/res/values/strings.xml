@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <string-array name="pradesh">
+        <item>Pradesh 1</item>
+        <item>Pradesh 2</item>
+        <item>Pradesh 3</item>
+        <item>Pradesh 4</item>
+        <item>Pradesh 5</item>
+        <item>Pradesh 6</item>
+    </string-array>
+
 </resources>
