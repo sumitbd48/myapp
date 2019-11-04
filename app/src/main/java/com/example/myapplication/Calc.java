@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Calc extends AppCompatActivity implements View.OnClickListener{
 
@@ -113,27 +114,47 @@ public class Calc extends AppCompatActivity implements View.OnClickListener{
                 break;
 
             case R.id.btnAdd:
-                num1 = Integer.parseInt(displayNum);
-                displayNum = "";
-                op = "+";
+                if (editText.getText().toString().isEmpty()){
+                    Toast.makeText(this, "Enter a number", Toast.LENGTH_SHORT).show();
+                } else {
+                    num1 = Integer.parseInt(displayNum);
+                    displayNum = "";
+                    editText.setText(displayNum);
+                    op = "+";
+                }
                 break;
 
             case R.id.btnSub:
-                num1 = Integer.parseInt(displayNum);
-                displayNum = "";
-                op = "-";
+                if (editText.getText().toString().isEmpty()){
+                    Toast.makeText(this, "Enter a number", Toast.LENGTH_SHORT).show();
+                } else {
+                    num1 = Integer.parseInt(displayNum);
+                    displayNum = "";
+                    editText.setText(displayNum);
+                    op = "-";
+                }
                 break;
 
             case R.id.btnMul:
-                num1 = Integer.parseInt(displayNum);
-                displayNum = "";
-                op = "*";
+                if (editText.getText().toString().isEmpty()){
+                    Toast.makeText(this, "Enter a number", Toast.LENGTH_SHORT).show();
+                } else {
+                    num1 = Integer.parseInt(displayNum);
+                    displayNum = "";
+                    editText.setText(displayNum);
+                    op = "*";
+                }
                 break;
 
             case R.id.btnDiv:
-                num1 = Integer.parseInt(displayNum);
-                displayNum = "";
-                op = "/";
+                if (editText.getText().toString().isEmpty()){
+                    Toast.makeText(this, "Enter a number", Toast.LENGTH_SHORT).show();
+                } else {
+                    num1 = Integer.parseInt(displayNum);
+                    displayNum = "";
+                    editText.setText(displayNum);
+                    op = "/";
+                }
                 break;
 
             case R.id.btnClear:
@@ -142,9 +163,13 @@ public class Calc extends AppCompatActivity implements View.OnClickListener{
                 break;
 
             case R.id.btnEq:
-                num2 = Integer.parseInt(displayNum);
-                res = getResult(op,num1,num2);
-                editText.setText(String.valueOf(res));
+                if (editText.getText().toString().isEmpty()){
+                    Toast.makeText(this, "Enter a number", Toast.LENGTH_SHORT).show();
+                } else {
+                    num2 = Integer.parseInt(displayNum);
+                    res = getResult(op, num1, num2);
+                    editText.setText(String.valueOf(res));
+                }
                 break;
         }
     }

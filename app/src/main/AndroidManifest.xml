@@ -9,18 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegdataActivity"></activity>
-        <activity android:name=".Form">
-
-        </activity>
-        <activity android:name=".RelLayout">
+        <activity android:name=".LinearLayout"></activity>
+        <activity android:name=".Table_layout" />
+        <activity android:name=".frame_layout" />
+        <activity android:name=".ButtonsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ConstLayout"></activity>
+        <activity android:name=".RegdataActivity" />
+        <activity android:name=".Form"></activity>
+        <activity android:name=".RelLayout" />
+        <activity android:name=".ConstLayout" />
         <activity android:name=".Calc" />
         <activity android:name=".ImageActivity" />
         <activity android:name=".TestActivity" />
