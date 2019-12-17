@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LinearLayout"></activity>
+        <activity android:name=".UpdateStudentsActivity"></activity>
+        <activity android:name=".DatabaseActivity" />
+        <activity android:name=".WordActivity" />
+        <activity android:name=".ImInActivity" />
+        <activity android:name=".SharedPreActivity" />
+        <activity android:name=".activity_file" />
+        <activity android:name=".ToolbarActivity" />
+        <activity android:name=".FragmentActivity" />
+        <activity android:name=".SplashActivity" />
+        <activity android:name=".RvActivity" />
+        <activity android:name=".UserDetail" />
+        <activity android:name=".Userlist" />
+        <activity android:name=".LinearLayout" />
         <activity android:name=".Table_layout" />
         <activity android:name=".frame_layout" />
         <activity android:name=".ButtonsActivity">
@@ -20,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegdataActivity" />
-        <activity android:name=".Form"></activity>
+        <activity android:name=".Form" />
         <activity android:name=".RelLayout" />
         <activity android:name=".ConstLayout" />
         <activity android:name=".Calc" />

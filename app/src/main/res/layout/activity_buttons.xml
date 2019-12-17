@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:textSize="40dp"
+        android:text="Various Layout"/>
+
+    <Button
+        android:id="@+id/btnLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/btn_style"
+        android:background="@drawable/button_background"
+        android:text="Linear Layout"/>
+
+    <Button
+        android:id="@+id/btnGL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/btn_style"
+        android:background="@drawable/button_background"
+        android:text="Grid Layout"/>
+
+    <Button
+        android:id="@+id/btnRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/btn_style"
+        android:background="@drawable/button_background"
+        android:text="Relative Layout"/>
+
+    <Button
+        android:id="@+id/btnCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/btn_style"
+        android:background="@drawable/button_background"
+        android:text="Constraint Layout"/>
+
+    <Button
+        android:id="@+id/btnTL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/btn_style"
+        android:background="@drawable/button_background"
+        android:text="Table Layout"/>
+
+    <Button
+        android:id="@+id/btnFL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/btn_style"
+        android:background="@drawable/button_background"
+        android:text="Frame Layout"/>
+
+    <Button
+        android:id="@+id/RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/btn_style"
+        android:background="@drawable/button_background"
+        android:text="Recycler View"/>
+
+    <Button
+        android:id="@+id/Toolbarbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/btn_style"
+        android:background="@drawable/button_background"
+        android:text="Toolbar"/>
+
+    <Button
+        android:id="@+id/btnFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/btn_style"
+        android:background="@drawable/button_background"
+        android:text="File Handling"/>
+
+    <Button
+        android:id="@+id/btnSp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/btn_style"
+        android:background="@drawable/button_background"
+        android:text="Shared Preference"/>
+
+    <Button
+        android:id="@+id/btnImIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/btn_style"
+        android:background="@drawable/button_background"
+        android:text="Implicit Intent"/>
+
+    <Button
+        android:id="@+id/btnWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/btn_style"
+        android:background="@drawable/button_background"
+        android:text="Word Shuffle"/>
+
+    <Button
+        android:id="@+id/btnDatabase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        style="@style/btn_style"
+        android:background="@drawable/button_background"
+        android:text="Database"/>
+
+</LinearLayout>
+</ScrollView>

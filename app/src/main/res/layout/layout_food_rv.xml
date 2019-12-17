@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/foodImg"
+        android:layout_width="65dp"
+        android:layout_height="95dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bac"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/foodName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/foodImg"
+        android:textSize="25dp"
+        android:text="Momo"/>
+
+    <TextView
+        android:id="@+id/foodCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/foodImg"
+        android:layout_below="@+id/foodName"
+        android:textSize="25dp"
+        android:text="Chicken"/>
+
+    <TextView
+        android:id="@+id/foodRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/foodImg"
+        android:layout_below="@+id/foodCategory"
+        android:textSize="25dp"
+        android:text="Rs.250"/>
+
+</RelativeLayout>
