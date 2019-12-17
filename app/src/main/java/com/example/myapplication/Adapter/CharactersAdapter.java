@@ -1,6 +1,7 @@
 package com.example.myapplication.Adapter;
 
 import android.content.Context;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,39 +20,24 @@ public class CharactersAdapter extends RecyclerView.Adapter<CharactersAdapter.Ch
     private Character[] characterList;
     EditText word;
 
-    public CharactersAdapter(Context context, Character[] characterList,EditText word) {
+    public CharactersAdapter(Context context, Character[] characterList, EditText word){
         this.context = context;
         this.characterList = characterList;
         this.word = word;
     }
 
-
     @NonNull
     @Override
     public CharactersHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_linear, parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.design_layout,parent,false);
         CharactersHolder charHolder = new CharactersHolder(view);
         return charHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final CharactersHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull CharactersHolder holder, int position) {
 
-
-        holder.txtChar.setText(String.valueOf(characterList[position]));
-
-        holder.txtChar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String setword = word.getText().toString() + characterList[position];
-                word.setText(setword);
-                holder.txtChar.setTextColor(context.getResources().getColor(R.color.colorBlack));
-                holder.txtChar.setBackgroundColor(context.getResources().getColor(R.color.colorGray));
-                holder.txtChar.setOnClickListener(null);
-            }
-        });
     }
-
 
     @Override
     public int getItemCount() {
@@ -60,13 +46,13 @@ public class CharactersAdapter extends RecyclerView.Adapter<CharactersAdapter.Ch
 
     public class CharactersHolder extends RecyclerView.ViewHolder{
 
-//        LinearLayout linearLayout;
-        TextView txtChar;
+        LinearLayout designLayout;
+        TextView tvCharacter;
 
         public CharactersHolder(@NonNull View itemView) {
             super(itemView);
-//            linearLayout = itemView.findViewById(R.id.layout_linear);
-            txtChar = itemView.findViewById(R.id.txtChar);
+            designLayout = itemView.findViewById(R.id.design);
+            tvCharacter = itemView.findViewById(R.id.textCharacter);
         }
     }
 }

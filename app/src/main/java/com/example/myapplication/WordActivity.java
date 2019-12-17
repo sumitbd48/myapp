@@ -24,44 +24,39 @@ import java.util.Collections;
 
 public class WordActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private String[] words = {"enormity", "literally", "colonel", "lieutenant", "unabashed", "alcoholic"};
-    private EditText etWord;
+    private EditText editWord;
+    TextView textView;
+    Button btnOk, btnClear;
     SharedPreferences sharedPreferences;
     private RecyclerView recyclerView;
-    TextView textView;
+    private String[] words = {"irregardless", "barbecue", "starry", "abandoned", "ponga", "flipflops"};
     private int level = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView =findViewById(R.id.leveltext);
-        Button btnOK = findViewById(R.id.btnOK);
-        Button btnClean = findViewById(R.id.btnClean);
-        etWord = findViewById(R.id.etWord);
+
+        editWord = findViewById(R.id.editWord);
+        textView = findViewById(R.id.gameLevel);
+        btnOk = findViewById(R.id.btnOk);
+        btnClear = findViewById(R.id.btnClear);
         recyclerView = findViewById(R.id.recyclerView);
 
-//        listWords = findViewById(R.id.listWords);
-//        showWord(level);
+
         SharedPreferences savedata = getSharedPreferences("Game", Context.MODE_PRIVATE);
         if (savedata.getInt("Level",0)==0) {
             showWord(level);
+
         }
         else {
             level=savedata.getInt("Level",0);
             showWord(level);
         }
 
+        btnOk.setOnClickListener(this);
+        btnClear.setOnClickListener(this);
 
-        btnOK.setOnClickListener(this);
-        btnClean.setOnClickListener(this);
-
-//        listWords.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                etWord.append(parent.getItemAtPosition(position).toString());
-//            }
-//        });
     }
 
     private Character[] shuffleWords(int level){
@@ -82,8 +77,9 @@ public class WordActivity extends AppCompatActivity implements View.OnClickListe
         return shuffledWord;
     }
 
+
     private void showWord(int i){
-        CharactersAdapter charactersAdapter = new CharactersAdapter(WordActivity.this, shuffleWords(i),etWord);
+        CharactersAdapter charactersAdapter = new CharactersAdapter(WordActivity.this, shuffleWords(i),editWord);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 3);
         recyclerView.setAdapter(charactersAdapter);
         recyclerView.setLayoutManager(layoutManager);
@@ -93,8 +89,8 @@ public class WordActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btnOK:
-                String usr_word = etWord.getText().toString();
+            case R.id.btnOk:
+                String usr_word = editWord.getText().toString();
                 if(level<words.length) {
                     if (usr_word.equals(words[level])) {
                         level++;
@@ -103,12 +99,12 @@ public class WordActivity extends AppCompatActivity implements View.OnClickListe
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putInt("Level",level);
                         editor.commit();
-                        etWord.setText("");
+                        editWord.setText("");
                         Toast.makeText(WordActivity.this, "Next Level", Toast.LENGTH_SHORT).show();
 
                     } else {
                         Toast.makeText(WordActivity.this, "Wrong Word", Toast.LENGTH_SHORT).show();
-                        etWord.setText("");
+                        editWord.setText("");
                         showWord(level);
                     }
                 }
@@ -118,10 +114,11 @@ public class WordActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
 
-            case R.id.btnClean:
-                etWord.getText().clear();
+            case R.id.btnClear:
+                editWord.getText().clear();
                 showWord(level);
                 break;
         }
+
     }
 }
